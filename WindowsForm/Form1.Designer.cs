@@ -41,9 +41,10 @@
             this.biberKilo = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tutarNm = new System.Windows.Forms.NumericUpDown();
             this.btnHesapla = new System.Windows.Forms.Button();
             this.tutarBox = new System.Windows.Forms.TextBox();
-            this.tutarNm = new System.Windows.Forms.NumericUpDown();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.domatesKilo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.domatesBirimFiyat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.armutBirimFiyat)).BeginInit();
@@ -186,6 +187,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tutar";
             // 
+            // tutarNm
+            // 
+            this.tutarNm.Location = new System.Drawing.Point(80, 47);
+            this.tutarNm.Name = "tutarNm";
+            this.tutarNm.ReadOnly = true;
+            this.tutarNm.Size = new System.Drawing.Size(68, 20);
+            this.tutarNm.TabIndex = 15;
+            // 
             // btnHesapla
             // 
             this.btnHesapla.Location = new System.Drawing.Point(6, 19);
@@ -205,19 +214,22 @@
             this.tutarBox.TabIndex = 14;
             this.tutarBox.Text = "Tutar";
             // 
-            // tutarNm
+            // linkLabel1
             // 
-            this.tutarNm.Location = new System.Drawing.Point(80, 47);
-            this.tutarNm.Name = "tutarNm";
-            this.tutarNm.ReadOnly = true;
-            this.tutarNm.Size = new System.Drawing.Size(68, 20);
-            this.tutarNm.TabIndex = 15;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(13, 253);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel1.TabIndex = 14;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(183, 257);
+            this.ClientSize = new System.Drawing.Size(183, 313);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -238,6 +250,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tutarNm)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -258,6 +271,7 @@
         private System.Windows.Forms.Button btnHesapla;
         private System.Windows.Forms.TextBox tutarBox;
         private System.Windows.Forms.NumericUpDown tutarNm;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
