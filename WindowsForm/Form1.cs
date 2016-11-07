@@ -25,27 +25,33 @@ namespace WindowsForm
         {
 
         }
-
+        //Domates Fiyat Hesaplama
         private void btnHesapla_Click(object sender, EventArgs e)
-
         {
-
-            string kdv;
-
-            //Domates Fiyat Hesaplama
             decimal domatesFiyat = domatesBirimFiyat.Value * domatesKilo.Value;
-
-            //Armut Fiyat Hesaplama
-            decimal armutFiyat = domatesBirimFiyat.Value * domatesKilo.Value;
-
-            //Salatalık Fiyat Hesaplama
-            decimal salatalikFiyat = salatalıkBirimFiyat.Value * salatalikKilo.Value;
-
-            //Biber Fiyat Hesaplama
-            decimal biberFiyat = salatalıkBirimFiyat.Value * salatalikKilo.Value;
-
+            nmDomates.Value += nmDomates.Value;
             tutarNm.Value = domatesFiyat;
+        }
+        
+        //Salatalık Fiyat Hesaplama
+        private void btnSalatalik_Click(object sender, EventArgs e)
+        {
+            decimal salatalikFiyat = salatalıkBirimFiyat.Value * salatalikKilo.Value;
+            nmSalatalik.Value = salatalikFiyat + nmSalatalik.Value;
+            tutarNm.Value = nmSalatalik.Value;
+        }
+        //Biber Fiyat Hesaplama
+        private void btnBiber_Click(object sender, EventArgs e)
+        {
+            decimal biberFiyat = biberBirimFiyat.Value * biberKilo.Value;
+            nmBiber.Value = biberFiyat + nmBiber.Value;
+        }
 
+        //Armut Fiyat Hesaplama
+        private void btnArmut_Click_1(object sender, EventArgs e)
+        {   
+            decimal armutFiyat = armutBirimFiyat.Value * armutKilo.Value;
+            nmArmut.Value = armutFiyat + tutarNm.Value;
         }
     }
 }
